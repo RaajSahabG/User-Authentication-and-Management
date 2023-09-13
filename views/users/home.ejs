@@ -1,0 +1,40 @@
+<% include('../layouts/header.ejs') %>
+
+<link rel="stylesheet" href="/public/css/Uhome.css"/>
+
+<h1>Welcome <%= user.name%></h1>
+<div class="container" width="78px" height="67px" >
+ <table width="50%">
+    <tr>
+        <td>
+            <img src="userImages/<%= user.image %>" width="100px" alt="<%= user.image %>">
+        </td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td><%= user.email %></td>
+    </tr>
+    <tr>
+        <td>Mobile</td>
+        <td><%= user.mobile %></td>
+    </tr>
+    <tr>
+        <td>Verified</td>
+        <td><% 
+            if(user.is_varified == 1){
+                %>
+                <p>Verified</p>
+                <%
+            }
+            %></td>
+    </tr>
+    
+ </table>
+
+ <a href="/edit?id=<%= user._id %>">Edit</a>
+ <br>
+ <a href="/logout">Logout</a>
+
+
+ <% include('../layouts/footer.ejs') %>
+</div>

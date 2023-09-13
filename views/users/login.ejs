@@ -1,0 +1,79 @@
+<% include('../base.ejs')%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/userlogin.css">
+</head>
+<style>
+  .navbar{
+    width: 811px;
+    background-color: rgb(34, 139, 81);
+    margin: -19px;
+    height: 33px;
+  }
+  .vts {
+    width: 500px;
+    height: 500px;
+  /* background-color: aqua;  */
+ }
+  #auth{
+    text-align: center;
+    color: white;
+    padding: 4px;
+
+ }
+ .container{
+  height: 356px;
+ }
+</style>
+<body>
+
+  <header>
+    <div class="navbar">
+      <ul>
+        <h3 id="auth">User Authentication And Management</h3>
+      </ul>
+</header>
+<div class="vts">
+  
+</div>
+  
+<div class="container">
+  <h1>Login</h1>
+
+  <%
+    if(typeof message !== 'undefined'){
+     %>
+      <h4><%= message %></h4>
+      <%
+    }
+  %>
+  <form action="/login" method="post">
+    <input type="email" name="email" placeholder="Enter your email" required>
+    <br><br>
+    <input type="password" name="password" placeholder="Enter your password" required>
+    <br><br>
+    <input type="submit" value="login">
+  </form>
+  <a href="/forget">forget Password</a>
+  <br><br>
+  <a href="/verification">Verification</a>
+  <br><br>
+  <a href="/register">Create Account</a>
+
+</div>
+</body>
+</html>
+
+
+   
+
+
+
+

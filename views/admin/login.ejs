@@ -1,0 +1,119 @@
+<% include('../layouts/header.ejs') %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/adminlogin.css">
+</head>
+<style>
+.navbar{
+  width: 707px;
+  background-color: black;
+ margin: -16px;
+}
+.navbar ul{
+  overflow: auto; /* when we apply float propty then its remove the other efforts */
+}
+.navbar li{
+  float: left;
+  list-style: none; /* for Bullet remove*/       
+  margin: 13px 20px;
+  
+}
+.navbar li a{
+  padding: 3px 3px;
+  text-decoration: none; /*remove underline types thing */
+  color: white;
+}
+.navbar li a:hover{
+  background-color: aqua;
+  color: red;
+}
+
+.navbar input{
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 3px 17px;
+  width: 129px;
+}
+.container {
+      width: 320px;
+      height: 292px;
+      text-align: center;
+      background-color: lavender;
+      border-color: darkcyan;
+      position: absolute;
+      left: 198px;
+      top: 91px;
+    }
+
+    .navbar {
+      width: 811px;
+      background-color: rgb(34, 139, 81);
+      margin: -19px;
+      height: 51px;
+    }
+
+    .vts {
+      width: 500px;
+      height: 300px;
+      /* background-color: aqua;  */
+    }
+
+    #auth {
+      text-align: center;
+      color: white;
+      padding: -15px;
+
+    }
+
+  
+</style>
+<body>
+  <header>
+    <div class="navbar">
+      <ul>
+        <h3 id="auth">User Authentication And Management</h3>
+      </ul>
+   </header>
+
+<div class="container">
+  <h1>Admin login</h1>
+
+  <%
+
+   if(typeof message !== 'undefined'){
+
+    %>
+      <h3><%= message %></h3>
+    <%
+   }  
+
+  %>
+
+    <form action="" method="POST">
+    
+    <input type="email" name="email" placeholder="Enter email">
+    <br><br>
+    <input type="password" name="password" placeholder="Enter password">
+    <br><br>
+    <input type="submit" value="login">
+
+    </form>
+
+    <a href="/admin/forget">Forget password</a>
+    <br><br>
+    <a href="/register">Create Account</a>
+    <br><br>
+   <a href="/home">Back</a>
+
+</div>
+
+</body>
+</html>
+<% include('../layouts/footer.ejs') %>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    .navbar{
+        width: 940px;
+        background-color: black;
+       margin: -16px;
+    }
+    .navbar ul{
+        overflow: auto; /* when we apply float propty then its remove the other efforts */
+    }
+    .navbar li{
+        float: left;
+        list-style: none; /* for Bullet remove*/       
+        margin: 13px 20px;
+        
+    }
+    .navbar li a{
+        padding: 3px 3px;
+        text-decoration: none; /*remove underline types thing */
+        color: white;
+    }
+    .navbar li a:hover{
+        background-color: aqua;
+        color: red;
+    }
+    
+    .navbar input{
+        border: 2px solid black;
+        border-radius: 4px;
+        padding: 3px 17px;
+        width: 129px;
+    }
+    .container{
+       
+        width: 100px;
+        height: 110px;
+      
+        background: no-repeat center center/cover url("/public/Newimg/hospital1.jpg");
+      
+    }
+    
+</style>
+<body>
+    <header>
+        <div class="navbar">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="/login">UserLogin</a></li>
+            <li><a  href="">AdminLogin</a></li>
+            
+        </ul>
+    </div>
+    </header>
+    <div class="container"></div>
+    
+</body>
+</html>

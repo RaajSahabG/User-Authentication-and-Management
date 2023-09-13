@@ -1,0 +1,16 @@
+.navbar{
+    width: 811px;
+    background-color: rgb(34, 139, 81);
+    margin: -19px;
+    height: 33px;
+  }
+  .vts {
+    width: 500px;
+    height: 300px;
+  /* background-color: aqua;  */
+ }
+  #auth{
+    text-align: center;
+    color: white;
+
+ }

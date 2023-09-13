@@ -1,0 +1,84 @@
+<% include('../layouts/header.ejs')%>
+
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      width: 320px;
+      height: 292px;
+      text-align: center;
+      background-color: lavender;
+      border-color: darkcyan;
+      position: absolute;
+      left: 198px;
+      top: 91px;
+    }
+
+    .navbar {
+      width: 811px;
+      background-color: rgb(34, 139, 81);
+      margin: -19px;
+      height: 33px;
+    }
+
+    .vts {
+      width: 500px;
+      height: 300px;
+      /* background-color: aqua;  */
+    }
+
+    #auth {
+      text-align: center;
+      color: white;
+      padding: 4px;
+
+    }
+
+    #jj {
+      position: relative;
+      left: 36px;
+    }
+  </style>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <ul>
+          <h3 id="auth">User Authentication And Management</h3>
+        </ul>
+     </header>
+
+    <div class="container">
+      <h1>Forget</h1>
+
+      <% if(typeof message !=='undefined' ){ %>
+        <h4>
+          <%= message %>
+        </h4>
+        <% } %>
+          <form action="/forget" method="post">
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <br><br>
+            <input type="submit" value="Send Reset Link">
+          </form>
+          <!-- <a href="/forget">forget Password</a> -->
+    </div>
+  </body>
+
+  </html>
+
+
+
+
+
+
+
+
+  <% include('../layouts/footer.ejs')%>

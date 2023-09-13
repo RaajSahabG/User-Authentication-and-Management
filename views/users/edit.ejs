@@ -1,0 +1,22 @@
+<% include('../layouts/header.ejs')%>
+
+<img src="user.Images/<%= user.image%>" width="100px" height="100px" alt="<%= user.image %>">
+<br>
+<form action="edit" method="POST" enctype="multipart/form-data">
+    
+    <input type="file" name="image">
+    <input type="hidden" name="user_id" value="<%= user._id %>">
+    <br><br>
+    <input type="text" name="name" value="<%= user.name %>" placeholder="enter Name" required>
+    <br><br>
+    <input type="email" name="email" value="<%= user.email %>" placeholder="Enter Email" required>
+    <br><br>
+    <input type="text" name="mno" value="<%= user.mobile %>" placeholder="Enter mobile No." required>
+    
+    <input type="submit" value="Update Profile">
+
+
+</form>
+
+
+<% include('../layouts/footer.ejs')%>

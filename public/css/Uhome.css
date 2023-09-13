@@ -1,0 +1,13 @@
+
+header{
+    width: 57px;
+}
+.nav{
+    width: 139px;
+    height: 122px;
+    background-color: solid black;
+    display: flex;
+}
+.nav li{
+    list-style: none;
+}

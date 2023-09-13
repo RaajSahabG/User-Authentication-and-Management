@@ -1,0 +1,10 @@
+.container{
+    width: 300px;
+    height: 292px;
+    text-align: center;
+    background-color: lavender;
+    border-color:darkcyan;
+    position: absolute;
+    left: 198px;
+    top: 91px;
+}
